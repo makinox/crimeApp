@@ -1,3 +1,31 @@
-<p>
-  dashboard works!
-</p>
+<section>
+  <article>
+    <div (click)="handleNavigation(0)">
+      <span>508</span>
+      <h5>Crime server</h5>
+    </div>
+    <div (click)="handleNavigation(1)">
+      <span>508</span>
+      <h5>Malware</h5>
+    </div>
+    <div (click)="handleNavigation(2)">
+      <span>508</span>
+      <h5>Bots</h5>
+    </div>
+    <div (click)="handleNavigation(3)">
+      <span>508</span>
+      <h5>Credentials</h5>
+    </div>
+    <div (click)="handleNavigation(4)">
+      <span>508</span>
+      <h5>Card</h5>
+    </div>
+  </article>
+  <article>
+    <div>{{title}}</div>
+  </article>
+  <div>
+    <a routerLink="/list">List</a>
+    <a routerLink="/detail">Details</a>
+  </div>
+</section>

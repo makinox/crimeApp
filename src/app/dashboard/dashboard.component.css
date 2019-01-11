@@ -1,0 +1,38 @@
+section {
+  background-color: #E3E3E3;
+}
+
+section article:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(auto, 300px));
+  grid-gap: 20px 30px;
+}
+
+section article:first-of-type div {
+  cursor: pointer;
+  background-color: #1FA7D7;
+  margin: 10px 0;
+  color: #fff;
+}
+
+section article:first-of-type div span {
+  display: inline-block;
+  margin: 10px;
+}
+
+section article:first-of-type div h5 {
+  margin: 1px 10px 60px 10px;
+}
+
+section article:last-of-type {
+  display: grid;
+  grid-template-columns: .8fr;
+  justify-content: center;
+  justify-items: center;
+}
+
+section article:last-of-type div {
+  background-color: #fff;
+  height: 300px;
+  width: 700px;
+}
