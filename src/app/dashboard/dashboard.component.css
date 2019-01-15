@@ -1,5 +1,8 @@
 section {
+  display: grid;
   background-color: #E3E3E3;
+  grid-template-columns: minmax(auto, 1200px);
+  justify-content: center;
 }
 
 section article:first-of-type {
@@ -29,10 +32,6 @@ section article:last-of-type {
   grid-template-columns: .8fr;
   justify-content: center;
   justify-items: center;
-}
-
-section article:last-of-type div {
   background-color: #fff;
-  height: 300px;
-  width: 700px;
+  padding: 30px;
 }
