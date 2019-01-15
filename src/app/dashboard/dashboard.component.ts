@@ -1,5 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
+import {data as crimeCount} from '../../db/crime_servers_count.json';
+import {data as crimeData} from '../../db/crime_servers_graph.json';
+
+import {data as malwCount} from '../../db/malware_count.json';
+import {data as malwData} from '../../db/malware_graph.json';
+
+import {data as botsCount} from '../../db/bots_count.json';
+import {data as botsData} from '../../db/bots_graph.json';
+
+import {data as credCount} from '../../db/credentials_count.json';
+import {data as credData} from '../../db/credentials_graph.json';
+
+import {data as cardCount} from '../../db/credit_cards_count.json';
+import {data as cardData} from '../../db/credit_cards_graph.json';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -9,6 +24,13 @@ export class DashboardComponent implements OnInit {
 
   nav: number = 0
   title: string = 'Crime servers'
+  titleCounter: Array<Number> = [
+    crimeCount[0]['attributes']['count'],
+    malwCount[0]['attributes']['count'],
+    botsCount[0]['attributes']['count'],
+    credCount[0]['attributes']['count'],
+    cardCount[0]['attributes']['count']
+  ]
 
   constructor() { }
 
@@ -32,18 +54,28 @@ export class DashboardComponent implements OnInit {
     if (e === 0) {
       this.nav = 0
       this.title = 'Crime servers'
+      console.log(crimeCount[0])
+      console.log(crimeData)
     } else if (e === 1) {
       this.nav = 1
       this.title = 'Malware'
+      console.log(malwCount[0])
+      console.log(malwData)
     } else if (e === 2) {
       this.nav = 2
       this.title = 'Bots'
+      console.log(botsCount[0])
+      console.log(botsData)
     } else if (e === 3) {
       this.nav = 3
       this.title = 'Credentials'
+      console.log(credCount[0])
+      console.log(credData)
     } else if (e === 4) {
       this.nav = 4
       this.title = 'Cards'
+      console.log(cardCount[0])
+      console.log(cardData)
     }
 
   }
