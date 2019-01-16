@@ -22,7 +22,7 @@
     </div>
   </article>
   <article>
-    <div>{{title}}</div>
+    <div (click)="route(title)">{{title}}</div>
     <canvas 
       baseChart width="400" height="100"
       [datasets]="lineChartData"

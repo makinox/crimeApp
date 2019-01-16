@@ -99,12 +99,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  // public chartClicked(e: any): void {
-  //   console.log(e);
-  // }
-
-  // public chartHovered(e: any): void {
-  //   console.log(e);
-  // }
-
+  route(link) {
+    window.location.href = `/list?${link}`
+  }
 }
