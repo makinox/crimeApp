@@ -43,4 +43,18 @@ function getCardData() {
   return [cardData.map(e => e.attributes.count), crimeData.map(e => e.id)]
 }
 
-export { getCounters, getCrimeData, getMalwData, getBotsData, getCredData, getCardData }
+function getFullData(a: string) {
+  if (a === 'Crime') {
+    return crimeData
+  } else if (a === 'Malware') {
+    return malwData
+  } else if (a === 'Bots') {
+    return botsData
+  } else if (a === 'Credentials') {
+    return credData
+  } else {
+    return cardData
+  } 
+}
+
+export { getCounters, getCrimeData, getMalwData, getBotsData, getCredData, getCardData, getFullData }

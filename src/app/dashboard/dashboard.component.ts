@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   public lineChartLabels: Array<any> = getCrimeData()[1];
   public lineChartOptions: any = {responsive: true};
   public lineChartColors: Array<any> = [
-    { // grey
+    {
       backgroundColor: 'rgba(148,159,177,0.2)',
       borderColor: 'rgba(148,159,177,1)',
       pointBackgroundColor: 'rgba(148,159,177,1)',
@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
     // })
     // console.log(data)
 
-    console.log(getCrimeData())
+    // console.log(getCrimeData())
   }
 
   handleNavigation(e) {
@@ -83,6 +83,6 @@ export class DashboardComponent implements OnInit {
   }
 
   route(link) {
-    window.location.href = `/list?${link}`
+    window.location.href = `/list?${link.split(' ')[0]}`
   }
 }
